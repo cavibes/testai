@@ -1,0 +1,39 @@
+AI Learning & Memory
+BrainCore tracks word frequencies; stores learned chunks as JSON.
+Prevents duplicate learning using file hashes & source tracking.
+Compatible with Windows, macOS, Linux, Raspberry Pi.
+Resource Monitoring
+Checks RAM & CPU via psutil; fallback if not installed.
+Lightweight; works on desktops, servers, or Pi.
+Internet Learning
+Fetches content from:
+Tavily API (topics: AI, robotics, IoT, etc.)
+RSS feeds (NYTimes Technology)
+Reddit (r/technology top posts)
+Wikipedia summaries
+Requires network; compatible with desktop, server, Pi.
+Direct Learning Utilities
+learn_text_content() & learn_text_directly() add words to BrainCore.
+Fully local; no network needed.
+Query System
+query_ai(text) returns top matching words from BrainCore.
+Offline, low resource usage.
+Raspberry Pi / Remote Device
+Queries HTTP endpoint (FLIPPER_ENDPOINT) for remote integration.
+Network required; works with Pi or any HTTP device.
+Flask Dashboard
+Web UI shows BrainCore, RAM/CPU, logs, and query input.
+Runs on port 5001; accessible from local network.
+Lightweight; Pi-compatible.
+Background Loops
+Internet learning loop fetches Tavily, RSS, Reddit periodically.
+Main loop refreshes BrainCore, queries Pi, and logs stats.
+Uses Python threading; minimal resource usage.
+Module Installation & Compatibility
+Auto-installs psutil, numpy, cv2 (headless), flask, tavily.
+Works on Windows, macOS, Linux; headless OpenCV for GUI-less systems.
+Device Summary
+Local learning & queries: ✅ Desktop, Pi, minimal devices
+Network features (Tavily, RSS, Reddit, Pi): ✅ Desktop, Pi; ⚠ Network required
+Flask Dashboard: ✅ Desktop, Pi; ⚠ Python + network
+OpenCV processing: ✅ Desktop, Pi; ✅ headless
